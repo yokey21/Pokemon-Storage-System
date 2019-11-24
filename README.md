@@ -1,4 +1,15 @@
 # Pokemon-Storage-System
+The aim of this project is implement a storage system for various competitive pokemon movesets. 
+This system relies on a specific directory set-up, therefore the program must be updated with the path of a specific device.
+
+#### The file architecture should be like so: 
+Pokemon_Data/<battle_formats>/<pokemon_name>/<moveset.pk> 
+ 
+###### EX: Pokemon_Data/Gen8_OU/Weezing-Galar/Defensive_Tank.pk
+
+
+
+
 
 ## directory.cpp
 Implements a simple class for navigating the terminal (MAC OSX)

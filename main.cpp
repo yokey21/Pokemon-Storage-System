@@ -5,7 +5,7 @@ using namespace std;
 
 #include "directory.cpp"
 
-const char * DATABASE_PATH = "/Users/adambyron/Pokemon_Data/Gen8_OU/";
+const char * DATABASE_PATH = "/Users/adambyron/Pokemon_Data/Gen8_OU";
 
 
 

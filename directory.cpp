@@ -101,7 +101,7 @@ bool isPokemon(string s)
 void printFile(string path)
 {
   ifstream f;
-  f.open("/Users/adambyron/Pokemon_Data/Gen8_OU/Weezing-Galar/Defensive_Tank.pk");
+  f.open(path);
   cout << endl << f.rdbuf();
   f.close();
 }

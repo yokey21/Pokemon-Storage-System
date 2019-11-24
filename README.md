@@ -3,8 +3,7 @@
 ## directory.cpp
 Implements a simple class for navigating the terminal (MAC OSX)
 
-'''cpp
-
+'''C++
 class directory
 {
   private:
@@ -18,5 +17,4 @@ class directory
     bool cd(string dir); //adds dir to the path (only updates if new path is valid)
     bool cat(string file); //prints contents of file
 };
-
 '''

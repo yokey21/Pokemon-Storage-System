@@ -59,7 +59,11 @@ void Pokemon_Interface::launch()
     cout << endl << "€ ";
     cin >> input;
 
-    if(input == "back") //"BACK" Command
+    if(input == "exit") //"exit" Command
+    {
+      return; //exit function and end program
+    }
+    else if(input == "back") //"back" Command
     {
       if(setView)
       {
@@ -74,7 +78,7 @@ void Pokemon_Interface::launch()
         pokemonView = 0;
       }
     }
-    else if(input == "home") //"HOME" command
+    else if(input == "home") //"home" command
     {
       if(setView)
       {

@@ -10,7 +10,7 @@ using namespace std;
 
 
 
-const char * DATABASE_PATH = "/Users/adambyron/Pokemon_Data";
+const char * DATABASE_PATH = "/Users/adambyron/Documents/GitHub/Pokemon-Storage-System/Pokemon_Data";
 
 int main()
 {
@@ -21,4 +21,5 @@ int main()
 
   pki.launch();
 
+  system("clear");
 }

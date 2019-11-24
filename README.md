@@ -3,7 +3,7 @@
 ## directory.cpp
 Implements a simple class for navigating the terminal (MAC OSX)
 
-'''c++
+'''cppp
 class directory
 {
   private:

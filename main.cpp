@@ -4,36 +4,16 @@
 using namespace std;
 
 #include "directory.cpp"
+#include "Pokemon_Interface.cpp"
 
-const char * DATABASE_PATH = "/Users/adambyron/Pokemon_Data/Gen8_OU";
-
-
-
-
-bool ls(const char* path);
+const char * DATABASE_PATH = "/Users/adambyron/Pokemon_Data";
 
 int main()
 {
   string path = DATABASE_PATH;
   string input;
 
-  //create new directory with given path
-  directory dir(DATABASE_PATH);
-  cout << endl << dir.getPath() << endl;
+  Pokemon_Interface pki(path);
 
-  dir.cd("Weezing-Galar");
-
-  dir.ls();
-
-  dir.cat("Defensive_Tank.pk");
-
-  cout << endl << dir.getPath() << endl;
-
-  //cout << "Select Pokemon: ";
-  //cin >> input;
+  pki.launch();
 }
-
-
-/////////////////////////////////////////////////////////////
-////////////////////// Helper Methods ///////////////////////
-/////////////////////////////////////////////////////////////

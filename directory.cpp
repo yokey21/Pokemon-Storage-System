@@ -1,6 +1,10 @@
 #include "directory.hpp"
 #include <fstream>
 
+directory::directory() : path("\0")
+{
+}
+
 directory::directory(string p) : path(p)
 {
 }
@@ -55,8 +59,25 @@ bool directory::cd(string dir)
   {
     //update path if valid
     path = tempPath;
+    return true;
   }
   return false;     //return false if path is invalid */
+}
+
+bool directory::setPath(string newPath)
+{
+  //create temporary path to check validity
+  string tempPath = newPath;
+  const char* path_c = tempPath.c_str();
+
+  //check if path is valid
+  if ((opendir (path_c)) != NULL)
+  {
+    //update path if valid
+    path = tempPath;
+    return true;
+  }
+  return false;
 }
 
 bool directory::cat(string filename)
@@ -78,7 +99,7 @@ bool directory::cat(string filename)
       //If "file" is found
       if(ent->d_name==filename)
       {
-        cout << "- " << ent->d_name << endl;
+        //cout << "- " << ent->d_name << endl;
         printFile(file_path);
       }
     }

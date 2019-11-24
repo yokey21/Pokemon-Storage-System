@@ -1,8 +1,9 @@
 # Pokemon-Storage-System
 
-##directory.cpp
+## directory.cpp
 Implements a simple class for navigating the terminal (MAC OSX)
-'''
+
+'''c++
 class directory
 {
   private:

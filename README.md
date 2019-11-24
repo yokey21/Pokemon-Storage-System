@@ -2,7 +2,8 @@
 
 ##directory.cpp
 Implements a simple class for navigating the terminal (MAC OSX)
-'class directory
+'''
+class directory
 {
   private:
     string path; //stores current path
@@ -16,4 +17,5 @@ Implements a simple class for navigating the terminal (MAC OSX)
     string getPath(); //returns the current path
     bool cd(string dir); //adds dir to the path (only updates if new path is valid)
     bool cat(string file); //prints contents of file
-};'
+};
+'''

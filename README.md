@@ -11,9 +11,7 @@ class directory
   public:
     directory(); //constructor
     directory(string p); //constructor
-
     bool setPath(string newPath);
-
     bool ls(); //prints contents of directory: returns 1 if successful
     string getPath(); //returns the current path
     bool cd(string dir); //adds dir to the path (only updates if new path is valid)

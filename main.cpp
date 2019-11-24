@@ -1,10 +1,14 @@
 
 #include <iostream>
 #include <dirent.h> //https://pubs.opengroup.org/onlinepubs/7908799/xsh/dirent.h.html
+#include "termcolor.hpp" //text formatting - https://termcolor.readthedocs.io/
+
 using namespace std;
 
 #include "directory.cpp"
 #include "Pokemon_Interface.cpp"
+
+
 
 const char * DATABASE_PATH = "/Users/adambyron/Pokemon_Data";
 

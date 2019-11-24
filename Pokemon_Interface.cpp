@@ -21,6 +21,7 @@ void Pokemon_Interface::launch()
   bool pokemonView = 0; //1 if you a pokemon is selected
   bool setView = 0; //1 if you are viewing a moveset
   string curPokemon;
+  string curSet;
   string input;
   while(1)
   {
@@ -30,32 +31,69 @@ void Pokemon_Interface::launch()
     //Check which view you are in (pokemon,set)
     if(setView) // SET VIEW (viewing set)
     {
-      cout << "*** Viewing " << input << " ***" << endl;
-      dir.cat(input);
-      setView = 0; //Go back After viewing
+      cout << termcolor::bold << termcolor::underline; //Format text (Bold/Underline)
+      cout << "*** Viewing " << curSet << " ***" << endl;
+      cout << termcolor::reset; //Reset Formatting
+
+      dir.cat(curSet);
+      //setView = 0; //Go back After viewing
     }
     else if(pokemonView) //POKEMON VIEW (viewing list of sets)
     {
+      cout << termcolor::bold << termcolor::underline; //Format text (Bold/Underline)
       cout << "Sets for " <<  curPokemon << endl;
+      cout << termcolor::reset; //Reset Formatting
+
       dir.ls();
-      pokemonView = 0; //Go back after viewing
+      //pokemonView = 0; //Go back after viewing
     }
     else //FORMAT VIEW (viewing pokemon in given format)
     {
+      cout << termcolor::bold << termcolor::underline; //Format text (Bold/Underline)
       cout << format << " Gen " << gen << " Pokemon" << endl;
+      cout << termcolor::reset; //Reset Formatting
       dir.ls();
     }
-
-
 
 
     cout << endl << "€ ";
     cin >> input;
 
-    //Check if input is a file
-    if(isPokemonFile(input))
+    if(input == "back") //"BACK" Command
+    {
+      if(setView)
+      {
+        //dir.cd("..");
+        setView = 0;
+        pokemonView = 1;
+      }
+      else if(pokemonView)
+      {
+        dir.cd("..");
+        setView = 0;
+        pokemonView = 0;
+      }
+    }
+    else if(input == "home") //"HOME" command
+    {
+      if(setView)
+      {
+        dir.cd("..");
+        setView = 0;
+        pokemonView = 0;
+      }
+      else if(pokemonView)
+      {
+        dir.cd("..");
+        setView = 0;
+        pokemonView = 0;
+      }
+    }
+    else if(isPokemonFile(input)) //Check if input is a file
     {
       setView = 1;
+      pokemonView = 1;
+      curSet = input;
       cout << endl;
     }
     else

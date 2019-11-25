@@ -25,12 +25,36 @@ Pokemon_Data/<battle_formats>/<pokemon_name>/<moveset.pk>
 
 - Type `help` for full command list
 
+## Pokemon_Interface class
+
+```cpp
+
+class Pokemon_Interface
+{
+  private:
+    int gen; //Generation of Pokemon (1-8)
+    string format; //OU,UU,etc
+    string home; //home directory of database
+    directory dir;
+  public:
+    Pokemon_Interface(int generation, string form, string path); //NOT IMPLEMENTED
+    Pokemon_Interface(string path); //default: gen(8), format(OU)
+
+    void add(); //adds a new set
+    void launch(); //lauches program
+};
+
+bool isPokemonFile(string s); //check if string is a .pk file(1) or directory(0)
+void open(string path); //opens given path in textedit
 
 
-## directory.cpp
+```
+
+## directory class
 Implements a simple class for navigating the terminal (MAC OSX)
 
 ```cpp
+//used to navigate directories similar to terminal (UNIX)
 class directory
 {
   private:
@@ -39,11 +63,16 @@ class directory
     directory(); //constructor
     directory(string p); //constructor
 
-    bool setPath(string newPath); //sets a new path (only updates if new path is valid) @return 1 if successful
+    bool setPath(string newPath);
 
-    bool ls(); //prints contents of directory @return 1 if successful
+    bool ls(); //prints contents of directory: returns 1 if successful
     string getPath(); //returns the current path
-    bool cd(string dir); //adds dir to the path (only updates if new path is valid) @return 1 if successful
-    bool cat(string file); //prints contents of file @return 1 if successful
+    bool cd(string dir); //adds dir to the path (only updates if new path is valid)
+    bool cat(string file); //prints contents of file
 };
+
+//returns 0 if s = '.'/'..'/'.DS_Store' (Used to hide system directories)
+bool isFile(string s);
+void printFile(string path);
+
 ```

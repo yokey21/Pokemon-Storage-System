@@ -4,7 +4,6 @@
 #include "termcolor.hpp" //text formatting - https://termcolor.readthedocs.io/
 
 using namespace std;
-//hello
 
 #include "directory.cpp"
 #include "Pokemon_Interface.cpp"

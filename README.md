@@ -1,5 +1,5 @@
 # Pokemon-Storage-System
-The aim of this project is implement a text-based storage system for various competitive pokemon movesets. 
+The aim of this project is implement a simple text-based storage system for various competitive pokemon movesets. 
 
 ### Set-Up
 

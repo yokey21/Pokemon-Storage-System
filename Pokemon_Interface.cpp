@@ -126,12 +126,17 @@ void Pokemon_Interface::launch()
     {
       add();
     }
+    if(input == "edit" && setView) //"edit" Command - allows user to modify set
+    {
+      open(dir.getPath() + "/" + curSet);
+    }
     if(input == "help") //"help" Command
     {
       cout << "home - Return to the list of pokemon" << endl;
       cout << "back - Return to the last folder" << endl;
       cout << "exit - Exit the program" << endl;
       cout << "add - Add a new moveset for a pokemon" << endl;
+      cout << "edit - Modify current set" << endl;
       cout << endl << "Type anything to close help menu: ";
 
       cin >> input;
@@ -162,4 +167,11 @@ bool isPokemonFile(string s)
     return 0;
   }
   return 1;
+}
+
+void open(string path)
+{
+  //Open new file
+  string prompt = "open -a TextEdit " + path;
+  system(prompt.c_str());
 }

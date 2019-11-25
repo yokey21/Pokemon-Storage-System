@@ -7,13 +7,12 @@ class Pokemon_Interface
     string home; //home directory of database
     directory dir;
   public:
-    Pokemon_Interface(int generation, string form, string path);
+    Pokemon_Interface(int generation, string form, string path); //NOT IMPLEMENTED
     Pokemon_Interface(string path); //default: gen(8), format(OU)
 
-    void add();
-    void launch();
+    void add(); //adds a new set
+    void launch(); //lauches program
 };
 
-//check if string is a .pk file(1) or directory(0)
-bool isPokemonFile(string s);
-void countdown();
+bool isPokemonFile(string s); //check if string is a .pk file(1) or directory(0)
+void open(string path); //opens given path in textedit

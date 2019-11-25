@@ -15,12 +15,17 @@ Pokemon_Data/<battle_formats>/<pokemon_name>/<moveset.pk>
 
 ### Usage
 1) Enter Pokemon name (case-insensitive)
+<img src="https://github.com/yokey21/Pokemon-Storage-System/blob/master/images/pokemon.png"  width="400" height="300" />
+
 2) Select Moveset (case-sensitive, include file extension `.pk`)
+<img src="https://github.com/yokey21/Pokemon-Storage-System/blob/master/images/sets.png"  width="400" height="300" />
+
 3) Type 'home' to return to the list of pokemon, or 'back' to return to the list of movesets
+<img src="https://github.com/yokey21/Pokemon-Storage-System/blob/master/images/set.png"  width="400" height="300" />
 
 - Type `help` for full command list
 
-![alt text](https://github.com/yokey21/Pokemon-Storage-System/blob/master/images/pokemon.png "Logo Title Text 1")
+
 
 ## directory.cpp
 Implements a simple class for navigating the terminal (MAC OSX)

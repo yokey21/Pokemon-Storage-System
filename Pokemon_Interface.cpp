@@ -25,7 +25,7 @@ void Pokemon_Interface::add()
   cout << "Pokemon Name: ";
   cin >> pokemonName;
 
-  cout << "Name of New Set (use '-' for spaces): ";
+  cout << "New Set (use '-' for spaces): ";
   cin >> setName;
 
   //create new file/directory (Only works for gen 8 OU)

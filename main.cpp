@@ -8,7 +8,7 @@ using namespace std;
 #include "directory.cpp"
 #include "Pokemon_Interface.cpp"
 
-
+void add();
 
 const char * DATABASE_PATH = "/Users/adambyron/Documents/GitHub/Pokemon-Storage-System/Pokemon_Data";
 

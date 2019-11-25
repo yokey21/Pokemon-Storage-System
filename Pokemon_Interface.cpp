@@ -16,6 +16,34 @@ Pokemon_Interface::Pokemon_Interface(string path)
   dir.cd(GEN8OU);
 }
 
+void Pokemon_Interface::add()
+{
+  string pokemonName;
+  string setName;
+
+  //get data from user
+  cout << "Pokemon Name: ";
+  cin >> pokemonName;
+
+  cout << "Name of New Set (use '-' for spaces): ";
+  cin >> setName;
+
+  //create new file/directory (Only works for gen 8 OU)
+  string path = "Pokemon_Data/Gen8_OU/" + pokemonName + "/" + setName + ".pk";
+
+  system(("mkdir " + dir.getPath() + "/" +  pokemonName).c_str());
+
+  ofstream file;
+  file.open(path,fstream::out);
+
+  //Add template text to file
+  file << "<paste pokemon data here>";
+
+  //Open new file
+  string prompt = "open -a TextEdit " + dir.getPath() + "/" +  pokemonName + "/" + setName + ".pk";
+  system(prompt.c_str());
+}
+
 void Pokemon_Interface::launch()
 {
   bool pokemonView = 0; //1 if you a pokemon is selected
@@ -23,6 +51,7 @@ void Pokemon_Interface::launch()
   string curPokemon;
   string curSet;
   string input;
+
   while(1)
   {
     //clears screen (MAC ONLY)
@@ -92,6 +121,20 @@ void Pokemon_Interface::launch()
         setView = 0;
         pokemonView = 0;
       }
+    }
+    if(input == "add") //"add" Command
+    {
+      add();
+    }
+    if(input == "help") //"help" Command
+    {
+      cout << "home - Return to the list of pokemon" << endl;
+      cout << "back - Return to the last folder" << endl;
+      cout << "exit - Exit the program" << endl;
+      cout << "add - Add a new moveset for a pokemon" << endl;
+      cout << endl << "Type anything to close help menu: ";
+
+      cin >> input;
     }
     else if(isPokemonFile(input)) //Check if input is a file
     {

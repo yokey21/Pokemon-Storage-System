@@ -9,8 +9,11 @@ class Pokemon_Interface
   public:
     Pokemon_Interface(int generation, string form, string path);
     Pokemon_Interface(string path); //default: gen(8), format(OU)
+
+    void add();
     void launch();
 };
 
 //check if string is a .pk file(1) or directory(0)
 bool isPokemonFile(string s);
+void countdown();

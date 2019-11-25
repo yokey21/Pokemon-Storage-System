@@ -16,5 +16,5 @@ class directory
 };
 
 //returns 0 if s = '.'/'..'/'.DS_Store' (Used to hide system directories)
-bool isPokemon(string s);
+bool isFile(string s);
 void printFile(string path);

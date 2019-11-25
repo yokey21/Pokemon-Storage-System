@@ -22,7 +22,7 @@ bool directory::ls()
     while ((ent = readdir (dir)) != NULL)
     {
       //Hides System Directories (./../.DS_Store)
-      if(isPokemon(ent->d_name))
+      if(isFile(ent->d_name))
       {
         //print directory name
         cout << "- " << ent->d_name << endl;
@@ -110,7 +110,7 @@ bool directory::cat(string filename)
 }
 
 //Returns false if s = '.', '..' or '.DS_Store'
-bool isPokemon(string s)
+bool isFile(string s)
 {
   if(s == "." || s == ".." || s == ".DS_Store")
   {

@@ -51,7 +51,7 @@ void open(string path); //opens given path in textedit
 ```
 
 ## directory class
-Implements a simple class for navigating the terminal (MAC OSX)
+Implements a simple class for navigating the terminal (unix)
 
 ```cpp
 //used to navigate directories similar to terminal (UNIX)

@@ -4,7 +4,7 @@ The aim of this project is implement a text-based storage system for various com
 ### Set-Up
 
 - This system relies on a specific directory set-up, therefore the program must be updated with the path of a specific device.
-1) Update the path in `main.cpp`
+1) Update the path in `main.cpp` with the full path to 'Pokemon_Data'
 2) Compile the program from terminal using `make`
 3) Run Pogram using `./pss`
 

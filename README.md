@@ -20,6 +20,8 @@ Pokemon_Data/<battle_formats>/<pokemon_name>/<moveset.pk>
 
 - Type `help` for full command list
 
+![alt text][logo]
+[logo]:https://github.com/yokey21/Pokemon-Storage-System/blob/master/images/pokemon.png "Logo Title Text 2" 
 
 ## directory.cpp
 Implements a simple class for navigating the terminal (MAC OSX)
